@@ -1,0 +1,12 @@
+{
+  "name": "dev_chibuzor_devtest2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --style=expanded --watch sass/main.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

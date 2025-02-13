@@ -1,0 +1,47 @@
+/* ==========================================================================
+   1. General Styles
+   ========================================================================== */
+
+/* Reset styles, box-sizing, base font, etc. */
+:root {
+  --color-white: #ffffff;
+  --color-faded: #eaeaea;
+  --color-active: #5bc8af;
+  --text-color: #333;
+  --background-color: #194d44;
+  --tip-background-color: #297c6b;
+  --error: #f77;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin: 0 auto;
+}

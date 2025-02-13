@@ -1,0 +1,236 @@
+/* ==========================================================================
+   4. Services 
+   ========================================================================== */
+.services {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 6.25rem;
+
+  @include responsive(desktop) {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1320px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    color: #333;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+
+    @include responsive(tablet) {
+      font-size: 2.25rem;
+      line-height: 2.875rem;
+    }
+    @include responsive(desktop) {
+      font-size: 2.25rem;
+      line-height: 2.875rem;
+    }
+
+    & > span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      font-style: normal;
+      font-weight: 700;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #333;
+      -webkit-text-fill-color: transparent;
+      mix-blend-mode: difference;
+
+      @include responsive(tablet) {
+        font-size: 2.25rem;
+        line-height: 2.875rem;
+      }
+
+      @include responsive(desktop) {
+        font-size: 2.25rem;
+        line-height: 2.875rem;
+      }
+    }
+
+    &--line {
+      width: 100%; //33.25rem
+      height: 0.0625rem;
+      background: #eaeaea;
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 3.75rem;
+    margin-bottom: 5.25rem;
+
+    @include responsive(tablet) {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @include responsive(desktop) {
+      grid-template-columns: 23.1875rem 23.1875rem 23.1875rem;
+      gap: 2.25rem;
+      margin-bottom: 2.25rem;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1320px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &-left {
+      color: #333;
+      font-family: Montserrat;
+      font-size: 1.125rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.75rem;
+
+      @include responsive(tablet) {
+        grid-column: span 2;
+      }
+
+      & span {
+        color: #333;
+        font-family: Montserrat;
+        font-size: 1.125rem;
+        font-style: italic;
+        font-weight: 800;
+        line-height: 1.75rem; /* 155.556% */
+      }
+    }
+
+    &-center,
+    &-right {
+      color: #333;
+      font-family: Montserrat;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+
+      @include responsive(tablet) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 1rem;
+
+    @include responsive(phone) {
+      grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem;
+    }
+    @include responsive(phone-tab) {
+      grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem;
+    }
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 6rem 6rem 6rem;
+    }
+
+    @include responsive(desktop) {
+      grid-template-rows: 6rem 6rem;
+      grid-template-columns: 23.1875rem 23.1875rem 23.1875rem;
+      gap: 2.25rem;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1320px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    border-radius: 0.25rem;
+    border: 2px solid #5bc8af;
+    color: #333;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.75rem; /* 155.556% */
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #5bc8af;
+    }
+
+    &:hover .services__tool-tip {
+      visibility: visible;
+    }
+
+    &:hover &-icon {
+      visibility: visible;
+    }
+
+    &-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-left: 1rem;
+      border-radius: 50%;
+      font-size: 0.7rem;
+      visibility: hidden;
+
+      border: 1px solid #5bc8af;
+      color: #5bc8af;
+      transition: all 0.2s;
+    }
+  }
+
+  &__tool-tip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    bottom: -100%;
+    width: 18.75rem;
+    height: 5.25rem;
+    flex-shrink: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #297c6b;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; /* 153.846% */
+    transition: all 0.2s;
+
+    &::before {
+      position: absolute;
+      top: -0.56rem;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      display: block;
+      width: 1.375rem;
+      height: 0.56rem;
+      background-color: #297c6b;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+  }
+}
