@@ -234,13 +234,12 @@ function handleVideo() {
 
 function validateInput(inputElement) {
   const errorEl = inputElement?.nextElementSibling?.nextElementSibling;
-  
+
   if (!inputElement.checkValidity()) {
     inputElement.style.border = '1px solid #f77';
     errorEl.style.display = 'block';
   } else {
     inputElement.style.border = '1px solid rgba(255, 255, 255, 0.5)';
-
     errorEl.style.display = 'none';
   }
 }
